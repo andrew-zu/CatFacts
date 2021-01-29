@@ -1,0 +1,30 @@
+ext {
+    androidGradlePluginVersion = '4.1.2'
+    kotlinVersion = '1.4.21'
+    androidXVersion = '1.2.0'
+    constraintLayoutVersion = '2.0.4'
+}
+
+allprojects {
+    buildscript {
+        repositories {
+            google()
+            jcenter()
+        }
+        dependencies {
+            classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+            // NOTE: Do not place your application dependencies here; they belong
+            // in the individual module build.gradle files
+        }
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
